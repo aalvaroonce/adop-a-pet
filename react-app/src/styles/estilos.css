@@ -1,0 +1,267 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #FAF8EF; /* Fondo más cálido */
+}
+
+/* Container for the Pet List and Pet Details */
+.pet-list, .pet-details {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #FDF3E1; /* Fondo beige claro */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Title styling */
+.pet-list-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #4A7C59; /* Verde oscuro */
+}
+
+/* Filter section styling */
+.filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #C19A6B; /* Marrón claro */
+    border-radius: 5px;
+    background-color: #FDF3E1;
+}
+
+.filter-label {
+    font-weight: bold;
+    color: #4A7C59; /* Verde oscuro */
+}
+
+.filter-input {
+    margin: 4px 0;
+    padding: 8px;
+    border: 1px solid #C19A6B; /* Marrón claro */
+    border-radius: 4px;
+    background-color: #FAF8EF; /* Fondo de input */
+}
+
+.filter-button {
+    padding: 10px 15px;
+    background-color: #4A7C59; /* Verde oscuro */
+    color: #FDF3E1; /* Texto claro */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filter-button:hover {
+    background-color: #3C5E45; /* Verde más oscuro */
+}
+
+/* Pets container styling */
+.pets-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+/* Pet card styling */
+.pets-card {
+    padding: 15px;
+    border: 1px solid #C19A6B;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #FDF3E1;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.pets-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.pets-nombre {
+    font-size: 20px;
+    margin: 8px 0;
+    color: #4A7C59;
+}
+
+.pets-tipo, .pet-type {
+    font-size: 14px;
+    margin: 4px 0;
+    color: #555;
+}
+
+.pet-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+/* Pet Details styling */
+.pet-details img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.pet-details p {
+    margin: 8px 0;
+    font-size: 16px;
+    color: #4A7C59;
+}
+
+.pet-details h1 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    color: #4A7C59;
+}
+
+.pet-details label {
+    margin: 8px 0;
+    font-size: 16px;
+    color: #4A7C59;
+}
+
+.adopt-button {
+    padding: 3px 5px;
+    background-color: #4A7C59; /* Verde oscuro */
+    color: #FDF3E1; /* Texto claro */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.adopt-button:hover {
+    background-color: #3C5E45; /* Verde más oscuro */
+}
+
+/* Back button styling */
+.back-button {
+    padding: 8px 12px;
+    margin-bottom: 15px;
+    background-color: #A3D9A5; /* Verde suave */
+    color: #4A7C59;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #8BBC8F; /* Verde más oscuro */
+}
+
+/* Styling for the filter menu as a navigation bar */
+.filter-menu {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 12px 24px;
+    background-color: #FDF3E1; /* Fondo beige claro */
+    border-bottom: 2px solid #C19A6B;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+    border-radius: 10px;
+}
+
+.filter-item {
+    display: grid;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 20px;
+}
+
+.filter-label {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    color: #4A7C59; /* Verde oscuro */
+}
+
+/* Styling for inputs and select elements */
+.filter-input, .filter-range, select {
+    padding: 6px 10px;
+    border: 1px solid #C19A6B;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #FAF8EF;
+}
+
+.filter-range {
+    cursor: pointer;
+}
+
+.filter-range::-webkit-slider-thumb,
+.filter-range::-moz-range-thumb {
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background: #A3D9A5; /* Verde suave */
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.edad-display {
+    margin-top: 4px;
+    font-size: 12px;
+    color: #555;
+}
+
+.direction-options {
+    display: flex;
+    gap: 12px;
+}
+
+.direction-option {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.filter-button {
+    padding: 10px 16px;
+    background-color: #4A7C59;
+    color: #FDF3E1;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: auto; /* Push button to right */
+}
+
+.filter-button:hover {
+    background-color: #3C5E45;
+}
+
+
+/* Message styles */
+.mensaje-container {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.mensaje-exito {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.mensaje-error {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
